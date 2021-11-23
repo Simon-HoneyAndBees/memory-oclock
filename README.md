@@ -1,4 +1,4 @@
-# memory-oclock
+# Memory oclock
 
 ## 1. Création de la base de données
 
