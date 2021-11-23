@@ -1,0 +1,185 @@
+body {
+	font-family: "Calibri", sans-serif;
+	font-size: 18px;
+}
+
+#mem-intro {
+	margin: 20px 0;
+}
+
+#mem-counters {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	margin: 20px 0;
+	max-width: 750px;
+}
+#mem-counter-click,#mem-counter-time {
+	margin-right: 10px;
+}
+#mem-counter-time {
+	margin-left: 10px;
+}
+.mem-counter-number {
+	font-weight: 600;
+}
+#mem-container {
+	background: #dddcff;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	max-width: 730px;
+	padding: 10px;
+}
+
+#mem-progress-container {
+	max-width: 748px;
+	height: 20px;
+	border: 1px solid #dedede;
+	margin-top: 15px;
+}
+#mem-progress {
+	background-color: red;
+	width: 0%;
+	height: 100%;
+	transition: all 3s;
+	transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
+}
+
+.mem-card {
+	height: 100px;
+	width: 100px;
+	margin: 2px;
+	perspective: 1000px;
+	cursor: pointer;
+}
+.mem-card.reveal {
+	cursor: not-allowed;
+}
+
+.mem-card-content {
+	position: relative;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	transition: transform 0.8s;
+	transform-style: preserve-3d;
+}
+
+.mem-card.reveal .mem-card-content {
+	transform: rotateY(180deg);
+}
+.mem-card.reveal.hide-card .mem-card-content {
+	transform: rotateY(0deg);
+}
+
+.mem-card-front,
+.mem-card-back {
+	position: absolute;
+	height: 100px;
+	width: 100px;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+}
+
+.mem-card-back {
+	background: gray;
+}
+.mem-card-front {
+	background-image: url("/assets/cards.png");
+	transform: rotateY(180deg);
+}
+
+.fruit-1 {
+	background-position-y: -000px;
+}
+.fruit-2 {
+	background-position-y: -100px;
+}
+.fruit-3 {
+	background-position-y: -200px;
+}
+.fruit-4 {
+	background-position-y: -300px;
+}
+.fruit-5 {
+	background-position-y: -400px;
+}
+.fruit-6 {
+	background-position-y: -500px;
+}
+.fruit-7 {
+	background-position-y: -600px;
+}
+.fruit-8 {
+	background-position-y: -700px;
+}
+.fruit-9 {
+	background-position-y: -800px;
+}
+.fruit-10 {
+	background-position-y: -900px;
+}
+.fruit-11 {
+	background-position-y: -1000px;
+}
+.fruit-12 {
+	background-position-y: -1100px;
+}
+.fruit-13 {
+	background-position-y: -1200px;
+}
+.fruit-14 {
+	background-position-y: -1300px;
+}
+
+#mem-message-background {
+	background: #00000080;
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 1;
+	display: none;
+}
+
+#mem-message-end {
+	z-index: 2;
+	background: white;
+	position: absolute;
+	border-radius: 5px;
+	padding: 20px;
+	top: calc(50% - 100px);
+	left: calc(50% - 250px);
+	display: none;
+	width: 500px;
+}
+
+#mem-message-end-title {
+	font-size: 24px;
+	font-weight: 600;
+	margin-bottom: 20px;
+}
+
+#mem-message-end-text {
+	margin-bottom: 20px;
+}
+#mem-message-end-restart {
+	width: 120px;
+	text-align: center;
+	margin: 10px auto;
+	border: 1px solid #d3d3d3;
+	padding: 10px;
+	border-radius: 3px;
+	cursor: pointer;
+	transition: all 0.1s;
+	box-shadow: 1px 1px 3px 0px #d9d9d9;
+}
+
+#mem-message-end-restart:hover {
+	transform: scale(1.05);
+}
